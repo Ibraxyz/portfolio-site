@@ -1,10 +1,12 @@
 import './App.css';
-import PButton from "./components/PButton";
+import './styles/grid.css';
+
+import Button from "./components/Button";
 
 function App() {
   return (
     <div className="App">
-      <PButton>Load More</PButton>
+      <Button>Load More</Button>
     </div>
   );
 }

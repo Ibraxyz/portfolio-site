@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Button = styled.button`
+const Btn = styled.button`
   color: palevioletred;
   font-size: 1em;
   margin: 1em;
@@ -10,6 +10,6 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-const PButton = ({children}) => <Button>{children}</Button>
+const Button = ({children}) => <Btn>{children}</Btn>
 
-export default PButton;
+export default Button;
