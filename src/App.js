@@ -47,7 +47,7 @@ function App() {
         <div className='col-1 no-gutter'>
           <Group>
             {
-              sideMenus.map(({ title, url }) => <SidemenuButton title={title} url={url} />)
+              sideMenus.map(({ title, url }) => <SidemenuButton title={title} url={url} active={title==='About'}/>)
             }
           </Group>
         </div>
