@@ -1,9 +1,13 @@
 import './App.css';
 import './styles/grid.css';
 
+//components
 import Container from "./components/Container";
 import Group from './components/Group';
 import SidemenuButton from './components/SidemenuButton';
+
+//pages
+import About from './pages/About';
 
 import React, { useState } from 'react';
 
@@ -52,15 +56,15 @@ function App() {
 
             {/** navigation history */}
             <Group bottom>
-              <div style={{ boxSizing: 'border-box', padding: '5px 15px'}}>
+              <div style={{ boxSizing: 'border-box', padding: '5px 15px' }}>
                 About
               </div>
             </Group>
 
             {/** Main content */}
             <Container>
-              <div style={{ boxSizing: 'border-box', padding: '40px 60px 40px 60px', height: '720px' }}>
-                <img src={{}} alt="" />
+              <div style={{ boxSizing: 'border-box', padding: '40px 60px 40px 60px', height: '720px' , overflow:'scroll'}}>
+                <About />
               </div>
             </Container>
           </Group>
