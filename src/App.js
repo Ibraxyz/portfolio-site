@@ -3,6 +3,24 @@ import './styles/grid.css';
 
 import Container from "./components/Container";
 import Group from './components/Group';
+import SidemenuButton from './components/SidemenuButton';
+
+const sideMenus = [{
+  "title": "About",
+  "url": "#"
+},
+{
+  "title": "Projects",
+  "url": "#"
+},
+{
+  "title": "Resume",
+  "url": "#"
+},
+{
+  "title": "Contact",
+  "url": "#"
+}]
 
 function App() {
   return (
@@ -16,31 +34,14 @@ function App() {
       </Group>
 
       <Group left bottom right>
-        <div className='col-2 no-gutter'>
+        <div className='col-1 no-gutter'>
           <Group>
-            <Group bottom>
-              <div style={{ boxSizing: 'border-box', padding: '15px' }}>
-                <p>About</p>
-              </div>
-            </Group>
-            <Group bottom>
-              <div style={{ boxSizing: 'border-box', padding: '15px' }}>
-                <p>Projects</p>
-              </div>
-            </Group>
-            <Group bottom>
-              <div style={{ boxSizing: 'border-box', padding: '15px' }}>
-                <p>Resume</p>
-              </div>
-            </Group>
-            <Group bottom>
-              <div style={{ boxSizing: 'border-box', padding: '15px' }}>
-                <p>Contact</p>
-              </div>
-            </Group>
+            {
+              sideMenus.map(({ title, url }) => <SidemenuButton title={title} url={url} />)
+            }
           </Group>
         </div>
-        <div className='col-10 no-gutter'>
+        <div className='col-11 no-gutter'>
           <Group left>
             <Container>
               <div style={{ boxSizing: 'border-box', padding: '40px 60px 40px 60px', height: '720px' }}>
