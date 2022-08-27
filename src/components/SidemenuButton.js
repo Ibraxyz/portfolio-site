@@ -14,7 +14,7 @@ const SidemenuButtonUnstyled = ({ title, url, className }) => {
 
 const SidemenuButton = styled(SidemenuButtonUnstyled)`
 box-sizing:border-box;
-padding: 15px;
+padding: 5px 15px 5px 15px;
 &:hover {
     color: #F54E4E; 
     cursor:pointer;

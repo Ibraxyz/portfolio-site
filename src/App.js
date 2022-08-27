@@ -5,6 +5,8 @@ import Container from "./components/Container";
 import Group from './components/Group';
 import SidemenuButton from './components/SidemenuButton';
 
+import React, { useState } from 'react';
+
 const sideMenus = [{
   "title": "About",
   "url": "#"
@@ -23,8 +25,11 @@ const sideMenus = [{
 }]
 
 function App() {
+  const [activeUrl, setActiveUrl] = useState('#');
+
   return (
     <div>
+      {/** Header */}
       <Group top left bottom right>
         <div className='col-12 no-gutter'>
           <div style={{ boxSizing: 'border-box', paddingLeft: '15px', paddingRight: '15px' }}>
@@ -33,6 +38,7 @@ function App() {
         </div>
       </Group>
 
+      {/** Sidebar */}
       <Group left bottom right>
         <div className='col-1 no-gutter'>
           <Group>
@@ -43,6 +49,15 @@ function App() {
         </div>
         <div className='col-11 no-gutter'>
           <Group left>
+
+            {/** navigation history */}
+            <Group bottom>
+              <div style={{ boxSizing: 'border-box', padding: '5px 15px'}}>
+                About
+              </div>
+            </Group>
+
+            {/** Main content */}
             <Container>
               <div style={{ boxSizing: 'border-box', padding: '40px 60px 40px 60px', height: '720px' }}>
                 <img src={{}} alt="" />
@@ -52,6 +67,7 @@ function App() {
         </div>
       </Group>
 
+      {/** footer */}
       <Group left bottom right>
         <div className='col-12 no-gutter'>
           <Group>
