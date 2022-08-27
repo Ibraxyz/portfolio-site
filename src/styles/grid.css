@@ -58,9 +58,11 @@
 .col-10,
 .col-11,
 .col-12 {
+    display:inline-block;
     box-sizing: border-box;
     padding-left: 15px;
     padding-right: 15px;
+    vertical-align: top;
 }
 
 .no-gutter {
